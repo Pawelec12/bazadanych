@@ -285,39 +285,6 @@ product-knowledge-base/
 
 ---
 
-## Fazy implementacji
-
-### Faza 1 — Fundament (tydzień 1–2)
-- Monorepo, projekt Neon, schemat Drizzle z rozszerzeniami pgvector/pg_trgm
-- Parser CSV + przykładowa konfiguracja YAML producenta
-- Pipeline normalizacji z transformacjami jednostek i `content_hash`
-- Endpoint ręcznego uploadu pliku do dev/testów
-
-### Faza 2 — Wyszukiwanie hybrydowe (tydzień 2–3)
-- Generowanie embeddingów na znormalizowanych produktach
-- Kanały dokładny + semantyczny + filtry z fuzją RRF
-- Scoring pewności z wyjaśnieniami
-- UI Search Playground
-
-### Faza 3 — Wzbogacanie (tydzień 3–4)
-- Zadania wzbogacania LLM (opisy zastosowań, podsumowania wyszukiwania, relacje)
-- Kolejka recenzji wzbogacenia w UI
-- Ponowne embedowanie po zatwierdzeniu wzbogacenia
-
-### Faza 4 — Odświeżanie i monitoring (tydzień 4–5)
-- Cron pollingu SFTP/Blob
-- Silnik diff na poziomie pliku i wiersza
-- Dashboard rozbieżności
-- Obsługa parserów Excel/XML
-
-### Faza 5 — Utwardzenie (tydzień 5–6)
-- Product Inspector (pełny widok pipeline)
-- Obsługa błędów, logika ponowień, idempotentne importy
-- Skrypt ewaluacji jakości wyszukiwania (oznaczony zestaw zapytań → metryki precision@K)
-- Dokumentacja dodawania nowych konfiguracji producentów
-
----
-
 ## Kluczowe decyzje projektowe
 
 1. **Wyszukiwanie tylko w Postgres** — unika operowania Elasticsearch przy skali 10K–100K SKU; pgvector HNSW + pg_trgm wystarcza na dokładne + rozmyte + semantyczne
