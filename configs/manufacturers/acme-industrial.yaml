@@ -1,0 +1,39 @@
+manufacturer: acme-industrial
+displayName: Acme Industrial
+filePattern: "acme_*.csv"
+delimiter: ";"
+encoding: windows-1250
+columns:
+  catalog_number:
+    source: ArtNr
+    transform: [trim, uppercase]
+  name:
+    source: Bezeichnung
+    transform: [trim]
+  description:
+    source: Beschreibung
+    transform: [trim]
+  mpn:
+    source: HerstellerNr
+    transform: [trim, uppercase]
+  voltage:
+    source: Spannung
+    transform: [parseVoltage]
+  length_mm:
+    source: Länge
+    transform: [parseLength, toMm]
+  material:
+    source: Material
+    transform: [trim]
+categoryRules:
+  - match:
+      column: Warengruppe
+      equals: Schrauben
+    category: fasteners/bolts
+  - match:
+      column: Warengruppe
+      contains: Kabel
+    category: electrical/cables
+requiredFields:
+  - catalog_number
+  - name

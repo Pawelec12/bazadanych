@@ -1,0 +1,32 @@
+{
+  "name": "@pkb/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@pkb/db": "workspace:*",
+    "@pkb/enrich": "workspace:*",
+    "@pkb/ingest": "workspace:*",
+    "@pkb/jobs": "workspace:*",
+    "@pkb/refresh": "workspace:*",
+    "@pkb/search": "workspace:*",
+    "@vercel/blob": "^0.27.3",
+    "drizzle-orm": "^0.40.0",
+    "next": "^15.2.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "ssh2-sftp-client": "^11.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@types/ssh2-sftp-client": "^9.0.4",
+    "typescript": "^5.8.2"
+  }
+}

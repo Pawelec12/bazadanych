@@ -1,0 +1,6 @@
+[
+  { "query": "ACME-001", "expectedCatalogNumbers": ["ACME-001"] },
+  { "query": "hex bolt stainless", "expectedCatalogNumbers": ["ACME-001"] },
+  { "query": "power cable", "expectedCatalogNumbers": ["ACME-002"] },
+  { "query": "terminal block", "expectedCatalogNumbers": ["ACME-003"] }
+]

@@ -1,0 +1,4 @@
+ArtNr;Bezeichnung;Beschreibung;HerstellerNr;Spannung;Länge;Material;Warengruppe
+ACME-001;M8 Hex Bolt;Stainless steel hex bolt M8x40;M8-SS-40;N/A;40 mm;Stainless;Schrauben
+ACME-002;Power Cable 3x2.5;Industrial power cable 3-core 2.5mm2;CBL-3G2.5;1000V;100 m;Copper;Kabel
+ACME-003;Terminal Block 12P;DIN rail terminal block 12 pole;TB-12P;300V;N/A;Plastic;Klemmen

@@ -1,0 +1,16 @@
+{
+  "crons": [
+    {
+      "path": "/api/refresh",
+      "schedule": "0 */6 * * *"
+    },
+    {
+      "path": "/api/enrich",
+      "schedule": "30 */6 * * *"
+    },
+    {
+      "path": "/api/jobs",
+      "schedule": "*/15 * * * *"
+    }
+  ]
+}

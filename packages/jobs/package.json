@@ -1,0 +1,21 @@
+{
+  "name": "@pkb/jobs",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "@pkb/db": "workspace:*",
+    "@pkb/enrich": "workspace:*",
+    "@pkb/ingest": "workspace:*",
+    "@pkb/search": "workspace:*",
+    "drizzle-orm": "^0.40.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}
